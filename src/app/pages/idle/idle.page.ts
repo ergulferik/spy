@@ -15,6 +15,6 @@ export class IdlePage {
   constructor(private router: Router) {}
 
   finish() {
-    this.router.navigate(['/home'], { replaceUrl: true });
+    this.router.navigate(['/'], { replaceUrl: true });
   }
 }

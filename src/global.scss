@@ -35,6 +35,7 @@
 
 ion-app {
   margin-top: env(safe-area-inset-top);
+  margin-bottom: env(safe-area-inset-bottom);
   --background: var(--dark-1);
   background: var(--dark-1);
 }
@@ -80,6 +81,6 @@ ion-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100%;
+  height: -webkit-fill-available;
   color: white;
 }
