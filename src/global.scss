@@ -81,6 +81,6 @@ ion-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: -webkit-fill-available;
+  height: calc(100% - 2rem);
   color: white;
 }
