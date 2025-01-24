@@ -1,0 +1,7 @@
+{
+  "name": "spy",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
