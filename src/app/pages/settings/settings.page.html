@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title> Ayarlar </ion-title>
+    <ion-icon (click)="close()" slot="end" src="assets\icon\x.svg"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<div class="container">
+  <div class="settings-list">
+    <div class="setting">
+      <ion-checkbox [(ngModel)]="data.spyWord">Casusa kelime ver</ion-checkbox>
+    </div>
+    <div class="setting">
+      <ion-checkbox [(ngModel)]="data.moreSpy">Birden fazla casus</ion-checkbox>
+    </div>
+
+    <ion-radio-group [(ngModel)]="data.fetchType">
+      <ion-radio value="file">Kelimeler dosyadan okunsun</ion-radio>
+      <ion-radio value="web">Kelimeler internetten okunsun</ion-radio><br />
+    </ion-radio-group>
+  </div>
+
+  <button (click)="save()" matRipple class="end">Kaydet</button>
+</div>

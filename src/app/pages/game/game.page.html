@@ -1,0 +1,19 @@
+<div class="container">
+  @for (user of userService.users(); let i = $index; track user.id) { @if
+  (activeIndex == i) {
+
+  <h2>
+    {{user.name}} Hazır mısın? <br />
+    Kelimen kartın arkasında
+  </h2>
+
+  <div class="card-container">
+    <div class="card" [ngClass]="cardSide">
+      <div class="content" (click)="cardClick()">
+        <div class="front">Kelimeni görmek için tıkla</div>
+        <div class="back">{{user.word}}</div>
+      </div>
+    </div>
+  </div>
+  } }
+</div>

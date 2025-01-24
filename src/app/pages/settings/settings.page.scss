@@ -1,0 +1,27 @@
+ion-radio {
+  border-bottom: 1px solid var(--dark-2);
+  margin: 1rem;
+  margin-bottom: 0px;
+  display: flex;
+  padding: 0.5rem;
+}
+
+.setting {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  border-bottom: 1px solid var(--dark-2);
+  padding: 0.5rem 0.2rem;
+}
+
+.end {
+  width: max-content;
+  padding: 0.5rem 1rem;
+  margin: 1rem;
+  align-self: center;
+  border-radius: 12px;
+  background-color: var(--primary);
+  font-size: 18px;
+  color: white;
+  border: 1px solid var(--dark-primary);
+}

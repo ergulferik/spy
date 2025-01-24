@@ -1,3 +1,18 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-header>
+    <ion-toolbar>
+      <ion-icon
+        (click)="goTo('/home')"
+        slot="start"
+        src="assets\icon\home.svg"></ion-icon>
+      <ion-title> Casus Kim </ion-title>
+      <ion-icon
+        (click)="openModal()"
+        slot="end"
+        src="assets\icon\settings.svg"></ion-icon>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content [fullscreen]="false">
+    <ion-router-outlet></ion-router-outlet>
+  </ion-content>
 </ion-app>

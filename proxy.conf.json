@@ -1,0 +1,9 @@
+{
+    "/api": {
+      "target": "https://rastgele.net",
+      "secure": true,
+      "changeOrigin": true,
+      "logLevel": "debug"
+    }
+  }
+  

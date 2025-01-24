@@ -1,0 +1,37 @@
+<div class="container">
+  <form class="input-wrapper" (submit)="onSubmit()">
+    <label for="user">Oyuncu Adı</label>
+    <input
+      [(ngModel)]="userName"
+      name="userName"
+      placeholder="Ergül Ferik"
+      required />
+    @if (userName.length > 0) {
+    <button @fadeRight type="submit">
+      <ion-icon src="assets/icon/check.svg"></ion-icon>
+    </button>
+    }
+  </form>
+
+  <div class="user-list-wrapper">
+    <p>Oyuncu listesi</p>
+    <div class="list-wrapper">
+      @for (user of userService.users(); track user.id) {
+      <div @fadeRight class="user">
+        <div class="user-info">
+          <ion-icon src="assets\icon\user.svg"></ion-icon>
+          <div class="user-name">{{user.name}}</div>
+        </div>
+        <div
+          (click)="userService.deleteUser(user.id)"
+          class="ripple-container ion-activatable">
+          <ion-icon src="assets/icon/x.svg"></ion-icon>
+          <ion-ripple-effect></ion-ripple-effect>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+
+  <button (click)="start()" matRipple class="start">Başlat</button>
+</div>

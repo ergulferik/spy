@@ -1,11 +1,45 @@
 import { Component } from '@angular/core';
-import { IonApp, IonRouterOutlet } from '@ionic/angular/standalone';
+import { Router } from '@angular/router';
+import {
+  IonApp,
+  IonRouterOutlet,
+  IonHeader,
+  IonToolbar,
+  IonTitle,
+  IonIcon,
+  IonRippleEffect,
+  IonContent,
+  ModalController,
+} from '@ionic/angular/standalone';
+import { SettingsPage } from './pages/settings/settings.page';
 
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
-  imports: [IonApp, IonRouterOutlet],
+  imports: [
+    IonApp,
+    IonRouterOutlet,
+    IonHeader,
+    IonToolbar,
+    IonTitle,
+    IonIcon,
+    IonContent,
+  ],
 })
 export class AppComponent {
-  constructor() {}
+  constructor(
+    private router: Router,
+    private modalCtrl: ModalController
+  ) {}
+
+  goTo(route: string) {
+    this.router.navigate([route], { replaceUrl: true });
+  }
+
+  async openModal() {
+    const modal = await this.modalCtrl.create({
+      component: SettingsPage,
+    });
+    modal.present();
+  }
 }
