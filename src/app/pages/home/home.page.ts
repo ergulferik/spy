@@ -1,4 +1,4 @@
-import { Component, effect } from '@angular/core';
+import { Component } from '@angular/core';
 import { IonIcon, IonRippleEffect } from '@ionic/angular/standalone';
 import { UserService } from '../../services/user.service';
 import { FormsModule } from '@angular/forms';

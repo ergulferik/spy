@@ -31,7 +31,7 @@ export class AppComponent {
 
   async openModal() {
     const modal = await this.modalCtrl.create({
-      component: SettingsPage,
+      component: SettingsPage
     });
     modal.present();
   }

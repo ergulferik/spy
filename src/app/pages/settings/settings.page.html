@@ -1,6 +1,6 @@
 
 <div class="app-header">
-  <div></div>
+  <div style="width: 1.5rem; height: 1.5rem;"></div>
   <div class="app-title">Ayarlar</div>
   <ion-icon (click)="close()" slot="end" src="assets\icon\x.svg"></ion-icon>
 </div>
@@ -16,7 +16,7 @@
 
     <ion-radio-group [(ngModel)]="data.fetchType">
       <ion-radio value="file">Kelimeler dosyadan okunsun</ion-radio>
-      <ion-radio value="web">Kelimeler internetten okunsun</ion-radio><br />
+      <ion-radio [disabled]="true" value="web">Kelimeler internetten okunsun</ion-radio><br />
     </ion-radio-group>
   </div>
 

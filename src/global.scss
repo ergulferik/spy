@@ -47,6 +47,7 @@ ion-app {
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem;
+  z-index: 2;
   .app-title {
     font-size: 22px;
     font-weight: bold;
@@ -68,6 +69,10 @@ ion-content {
   --background: var(--dark-1);
   --color: white;
   padding: 1rem;
+}
+
+ion-modal{
+  --background:var(--dark-1);
 }
 
 .container {
