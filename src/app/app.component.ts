@@ -3,11 +3,7 @@ import { Router } from '@angular/router';
 import {
   IonApp,
   IonRouterOutlet,
-  IonHeader,
-  IonToolbar,
-  IonTitle,
   IonIcon,
-  IonRippleEffect,
   IonContent,
   ModalController,
 } from '@ionic/angular/standalone';
@@ -19,12 +15,9 @@ import { SettingsPage } from './pages/settings/settings.page';
   imports: [
     IonApp,
     IonRouterOutlet,
-    IonHeader,
-    IonToolbar,
-    IonTitle,
     IonIcon,
-    IonContent,
-  ],
+    IonContent
+],
 })
 export class AppComponent {
   constructor(
