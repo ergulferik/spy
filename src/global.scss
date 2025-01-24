@@ -24,7 +24,6 @@
 @import '@ionic/angular/css/text-alignment.css';
 @import '@ionic/angular/css/text-transformation.css';
 @import '@ionic/angular/css/flex-utils.css';
-@import '@ionic/angular/css/palettes/dark.system.css';
 
 :root {
   --dark-1: #1a1a1a;
@@ -32,6 +31,12 @@
   --dark-light-text: #d9d9d9;
   --primary: #860909;
   --dark-primary: #630808;
+}
+
+ion-app{
+  margin-top: env(safe-area-inset-top);
+  --background:var(--dark-1);
+  background:var(--dark-1)
 }
 
 ion-header {
@@ -44,6 +49,8 @@ ion-header {
       background: var(--dark-2);
       text-align: center;
       opacity: 1 !important;
+      color: white;
+      --color:white;
     }
 
     ion-icon {
@@ -51,6 +58,7 @@ ion-header {
       margin: 0.5rem;
       width: 1.5rem;
       height: 1.5rem;
+      color: white;
     }
   }
 }
@@ -62,6 +70,8 @@ ion-content {
 }
 
 .container {
+  --background:var(--dark-1);
+  background:var(--dark-1);
   max-width: 768px;
   width: 100%;
   position: absolute;
@@ -71,4 +81,5 @@ ion-content {
   flex-direction: column;
   justify-content: center;
   height: 100%;
+  color: white;
 }

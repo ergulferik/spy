@@ -13,6 +13,7 @@
     }
   </form>
 
+  @if (this.userService.users().length >0) {
   <div class="user-list-wrapper">
     <p>Oyuncu listesi</p>
     <div class="list-wrapper">
@@ -32,6 +33,8 @@
       }
     </div>
   </div>
+  }
 
-  <button (click)="start()" matRipple class="start">Başlat</button>
+  <button [disabled]="this.userService.users().length <2" (click)="start()"
+    matRipple class="start">Başlat</button>
 </div>
