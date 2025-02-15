@@ -40,19 +40,18 @@ export class UserService {
   assignSpy(): void {
     this.users.update((users: User[]) => {
       if (users.length > 0) {
+        let spyCount = 1; 
         if (this.globalService.settings.moreSpy) {
-          return users.map(user => {
-            return { ...user, isSpay: Math.random() > 0.5 };
-          });
-        } else {
-          const randomIndex = Math.floor(Math.random() * users.length);
-          return users.map((user, index) => {
-            if (index === randomIndex) {
-              return { ...user, isSpay: true };
-            }
-            return { ...user, isSpay: false };
-          });
+          spyCount = Math.max(1, Math.floor(Math.random() * (users.length / 2)));
         }
+        const spyIndexes = new Set<number>();
+        while (spyIndexes.size < spyCount) {
+          spyIndexes.add(Math.floor(Math.random() * users.length));
+        }
+        return users.map((user, index) => ({
+          ...user,
+          isSpay: spyIndexes.has(index),
+        }));
       }
       return users;
     });
