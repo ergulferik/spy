@@ -1,14 +1,12 @@
 .end {
   width: max-content;
-  padding: 0.5rem 1rem;
+  padding: 1rem 2rem;
   margin: 1rem;
   align-self: center;
   border-radius: 12px;
   background-color: red;
   font-size: 18px;
   color: var(--dark-light-text);
-  width: 50vw;
-  height: 30vw;
   border: 1px solid var(--dark-primary);
   animation: blinkAnimation 2s infinite;
 }
@@ -18,6 +16,56 @@ h2 {
   color: var(--dark-light-text);
   text-align: center;
 }
+.user-list-wrapper {
+  margin: 1rem;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: calc(100% - 6rem);
+
+  .list-wrapper {
+    max-height: calc(100vh - 450px);
+    overflow: auto;
+    padding: 8px;
+    .user {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--dark-2);
+      margin-top: 0.75rem;
+      padding: 0.5rem;
+      box-shadow: 0px 4px 8px rgba(133, 133, 133, 0.1);
+      border-radius: 12px;
+      align-items: center;
+
+      ion-icon {
+        filter: drop-shadow(0px 0px 8px rgb(6, 42, 161));
+      }
+      .user-info {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5rem;
+        .user-name {
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+        }
+        ion-icon {
+          width: 1.5rem;
+          height: 1.5rem;
+          filter: drop-shadow(0px 0px 8px var(--primary));
+        }
+      }
+    }
+  }
+
+  p {
+    border-bottom: 1px solid var(--dark-2);
+    padding: 0.5rem;
+  }
+}
+
 
 @keyframes blinkAnimation {
   0% {

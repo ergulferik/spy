@@ -1,4 +1,24 @@
 <div class="container">
-  <h2>Oyunu bitirmeye hazır mısınız ?</h2>
+  <div class="user-list-wrapper">
+    <p>Casusu Seç</p>
+    <div class="list-wrapper">
+      @for (user of filteredUsers(); track user.id) {
+      <div @fadeRight class="user" (click)="selectSpy(user)">
+        <div class="user-info">
+          <ion-icon src="assets\icon\user.svg"></ion-icon>
+          <div class="user-name">{{user.name}}</div>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+
+  <ion-alert
+    [isOpen]="isAlertOpen"
+    header="Oyun Bitti"
+    [message]="'Casuslar ' + (spyWinner ? 'kazandı' : 'kaybetti')"
+    [buttons]="alertButtons"
+    (didDismiss)="finish()"></ion-alert>
+
   <button (click)="finish()" matRipple class="end">OYUNU BİTİR</button>
 </div>

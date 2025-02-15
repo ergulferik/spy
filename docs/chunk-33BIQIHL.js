@@ -1,0 +1,1 @@
+import{c as o,d as a,f as t,g as r}from"./chunk-FFJHRTPG.js";var i=o("fadeRight",[r("void => *",[t({opacity:0,transform:"translateX(100%)"}),a("0.3s ease-out",t({opacity:1,transform:"translateX(0)"}))]),r("* => void",[a("0.3s ease-in",t({opacity:0,transform:"translateX(100%)"}))])]);export{i as a};
